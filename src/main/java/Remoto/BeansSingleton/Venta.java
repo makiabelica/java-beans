@@ -1,6 +1,6 @@
-package BeansSingleton;
+package Remoto.BeansSingleton;
 
-import BeansStatefullLocal.IInventario;
+import Local.Util.IInventario;
 
 import javax.ejb.EJB;
 import javax.ejb.Singleton;

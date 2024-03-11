@@ -1,5 +1,4 @@
-import BeansStatefullRemote.IPostVenta;
-import BeansStateless.IProducto;
+import Remoto.BeansStateless.IProducto;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -18,7 +17,7 @@ public class TestProductoStateless {
 
             // Perform JNDI lookup using the configured properties
             IProducto postVenta = (IProducto) jdni.lookup("java:global/TiendaComestible-1" +
-                    ".0-SNAPSHOT/Producto!BeansStateless.IProducto");
+                    ".0-SNAPSHOT/Producto!Remoto.BeansStateless.IProducto");
 
             System.out.println("Imprimiendo EJB Local");
             System.out.println("Mostrar Producto ⛳");

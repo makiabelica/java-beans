@@ -1,4 +1,4 @@
-import BeansSingleton.IVenta;
+import Remoto.BeansSingleton.IVenta;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -17,15 +17,15 @@ public class TestVentaSingleton {
 
 
             // Perform JNDI lookup using the configured properties
-            IVenta venta = (IVenta) jdni.lookup("java:global/TiendaComestible-1.0-SNAPSHOT/Venta!BeansSingleton" +
+            IVenta venta = (IVenta) jdni.lookup("java:global/TiendaComestible-1.0-SNAPSHOT/Venta!Remoto.BeansSingleton" +
                     ".IVenta");
 
-            System.out.println("Imprimiendo EJB Local");
-            System.out.println(venta.obtenerVendidosMensual());
-            System.out.println(venta.productosVendidos());
+            System.out.println("==== Imprimiendo EJB Local ===");
+            System.out.println("VENTA OBTENIDA MENSUAL: " + venta.obtenerVendidosMensual());
+            System.out.println("CANTIDAD DE PRODUCTOS VENDIDOS " + venta.productosVendidos());
 
-            System.out.println("Imprimiendo EJB Remoto");
-            System.out.println(venta.cantidadProducos());
+            System.out.println("=== Imprimiendo EJB Remoto ===");
+            System.out.println("STOCK DE PRODUCTOS " + venta.cantidadProducos());
 
 
         } catch (NamingException e){

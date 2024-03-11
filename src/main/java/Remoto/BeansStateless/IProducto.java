@@ -1,4 +1,4 @@
-package BeansStateless;
+package Remoto.BeansStateless;
 
 import javax.ejb.Remote;
 

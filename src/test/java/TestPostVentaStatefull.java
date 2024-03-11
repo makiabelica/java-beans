@@ -1,5 +1,4 @@
-import BeansSingleton.IVenta;
-import BeansStatefullRemote.IPostVenta;
+import Remoto.BeansStateful.IPostVenta;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -12,14 +11,11 @@ public class TestPostVentaStatefull {
 
     public static void  testPostVenta(){
         try {
-
-            // Create the InitialContext (automatically loads configuration from jndi.properties)
             Context jdni = new InitialContext();
 
 
-            // Perform JNDI lookup using the configured properties
             IPostVenta postVenta = (IPostVenta) jdni.lookup("java:global/TiendaComestible-1" +
-                    ".0-SNAPSHOT/PostVenta!BeansStatefullRemote.IPostVenta");
+                    ".0-SNAPSHOT/PostVenta!Remoto.BeansStateful.IPostVenta");
 
             System.out.println("Imprimiendo EJB Local");
             System.out.println("Post Venta Semanal ⛳");

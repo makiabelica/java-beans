@@ -1,9 +1,16 @@
-package BeansStatefullLocal;
+package Local.Util;
 
+import Local.Lib.IIVentarioLib;
+
+import javax.ejb.EJB;
 import javax.ejb.Stateful;
 
 @Stateful
 public class Inventario implements IInventario{
+
+    @EJB
+    private IIVentarioLib inventarioLib;
+
     @Override
     public int mostrarCantidadVendidas(int cantidad) {
         return cantidad;
@@ -11,7 +18,7 @@ public class Inventario implements IInventario{
 
     @Override
     public double totalSemanal(double ventaDia) {
-        return ventaDia * 5;
+        return inventarioLib.totalSemanal(ventaDia);
     }
 
     @Override

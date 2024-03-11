@@ -1,4 +1,4 @@
-package BeansStatefullLocal;
+package Local.Util;
 
 import javax.ejb.Local;
 

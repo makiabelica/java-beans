@@ -1,6 +1,6 @@
-package BeansStateless;
+package Remoto.BeansStateless;
 
-import BeansStatefullLocal.IInventario;
+import Local.Util.IInventario;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
